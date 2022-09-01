@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap" rel="stylesheet">
+    <title>Registration Form</title>
+    <script src="regclient.js"></script>
+</head>
+<body>
+    <div id="chatReg">
+        <h1>Register</h1>
+        <div id="chatErr"></div>
+        <label>Email:</label> <input type="text" name="email" id ="chatMail" autocomplete="off" autofocus><br><br>
+        <label>Username:</label> <input type="text" name="user" id ="chatUser" autocomplete="off"><br><br>
+        <label>Password:</label> <input type="password" name="pass" id ="chatPass" autocomplete="off"><br><br>
+        <button onclick="Reg()" id="chatRegister">Register</button>
+        <a id="chatRegLnk" href="/">Back</a><br>
+        <!--<form action="/registerUser" method="POST">
+            <label>Email:</label> <input type="text" name="email" id ="chatMail" autocomplete="off" autofocus><br><br>
+            <label>Username:</label> <input type="text" name="user" id ="chatUser" autocomplete="off"><br><br>
+            <label>Password:</label> <input type="password" name="pass" id ="chatPass" autocomplete="off"><br><br>
+            <input type="submit" value="Register" id="chatRegister"><br>
+        </form>-->
+    </div>
+</body>
+</html>

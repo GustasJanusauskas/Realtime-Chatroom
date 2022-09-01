@@ -1,0 +1,141 @@
+html {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    background-image: url("background.png");
+    background-color: rgb(240, 240, 240);
+    background-attachment: fixed;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: dimgray;
+}
+
+img, iframe {
+    border-radius: 16px;
+}
+
+img {
+    height: 256px;
+    width: auto;
+}
+
+label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+}
+
+#chat, #chatReg {
+    background-color: rgba(211, 211, 211,0.75);
+    max-width: 960px;
+    margin: auto;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+#chatWindow {
+    height: 512px;
+}
+
+#chatWindow, #chatText {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    overflow-wrap: anywhere;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#chatWindow, #chatText, #chatUser, #chatPass, #chatMail {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 8px;
+    text-align: left;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: whitesmoke;
+    transition: 0.3s;
+}
+
+#chatRoomInput, #chatSavedRooms {
+    padding: 4px;
+    font-family: 'Quicksand', sans-serif;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    background-color: whitesmoke;
+    width: 320px;
+    transition: 0.3s;
+}
+
+#chatRoomInput {
+    width: 200px;
+}
+
+#chatSavedRooms {
+    margin: auto;
+    height: 128px;
+    background-color: rgb(224, 224, 224);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#chatWindow:focus, #chatText:focus, #chatUser:focus, #chatPass:focus, #chatMail:focus, #chatRoomInput:focus {
+    background-color: white;
+}
+
+#chatSend, #chatRegister, #scrollCheck, #chatRegLnk, #chatAddRoomBtn, .roomButton {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    border-radius: 6px;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: whitesmoke;
+    transition: 0.3s;
+    margin-left: 8px;
+}
+
+.roomButton {
+    padding: 6px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin: 4px;
+}
+
+#chatAddRoomBtn {
+    padding: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 0px;
+}
+
+#chatSend {margin-left: 25%;}
+
+#chatSend:hover, #chatRegister:hover, #chatRegLnk:hover, #chatAddRoomBtn:hover, .roomButton:hover {
+    background-color: rgb(168, 168, 168);
+    cursor: pointer;
+}
+
+#chatRegLnk {
+    text-decoration: none;
+}
+
+#chatControls {
+    text-align: left;
+}

@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "cookies": "^0.8.0",
+    "pg": "^8.8.0",
+    "querystring": "^0.2.1",
+    "sanitize-html": "^2.7.1",
+    "ws": "^8.8.1"
+  }
+}
