@@ -77,9 +77,11 @@ function SendFile(file) {
         reader.onload = function(event) {
             var contents = event.target.result;
             var finalstring = contents.substr(contents.indexOf("base64,") + "base64,".length);
-            finalstring += "^" + getCookie('session') + "^" + file.name.split('.')[file.name.split('.').length - 1];
+            finalstring += '^' + getCookie('session') + '^' + file.name.split('.')[file.name.split('.').length - 1] + '^^'; //2 Extra symbols at the end to differentiate from normal messages
+
             if (VERBOSE_DEBUG) console.log("File Uploaded. Size: " + file.size);
             if (VERBOSE_DEBUG) console.log("File Excerpt: " + finalstring.substr(0,50));
+
             connection.send(finalstring);
         };
         reader.onerror = function(event) {

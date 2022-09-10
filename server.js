@@ -55,7 +55,7 @@ wss.on('connection', (ws,req) => {
     if (message.substring(0,11) == "^connected^") { //first time connection
       GetMessages(message,ip,ws);
     }
-    else if (CountLetter('^',message) == 2 && base64Regex.test(message.split('^')[0])) { //if file
+    else if (CountLetter('^',message) == 4 && base64Regex.test(message.split('^')[0])) { //if file
       FileMessage(message,ip);
     }
     else if (CountLetter('^',message) == 2 && message.split('^')[1].trim().length > 0){ //normal message
@@ -261,7 +261,7 @@ function SendMessage(websock, datastr,usrname = '', type = '') {
   if (type == 'file') //file dl link
     finaldatastr =  '<a href="' + datastr + '" download>Uploaded File.</a>';
   else if (type == 'image') //embedded image
-    finaldatastr = '<img src="' + datastr + '" alt="User Image">';
+    finaldatastr = '<br><img src="' + datastr + '" alt="User Image">';
   else if (datastr.includes('youtube.com/watch?v=')) //youtube link iframe
     finaldatastr = '<a href="' + datastr + '" >' + datastr + '</a><br><iframe width="450" height="253" src="https://www.youtube.com/embed/' + datastr.substr(datastr.indexOf("youtube.com/watch?v=") + "youtube.com/watch?v=".length) + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>;';
   else if (linkRegex.test(datastr) && ['.jpg','.png','.gif','.bmp'].includes(datastr.substring(datastr.length - 4))) //embedded image link
@@ -283,7 +283,7 @@ function Broadcast(theMessage,username = '',ttype = '') {
 
 function CountLetter(letter,str) {
   var x = 0;
-  for(var y = 0;y < str.length - 1;y++){
+  for(var y = 0;y < str.length;y++){
     if (str[y] == letter)
       x++;
   }
